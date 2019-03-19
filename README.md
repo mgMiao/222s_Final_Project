@@ -1,5 +1,7 @@
 # Final project
-
+***author***  
+* Jie Miao
+* Shanglin Cai
 
 ***ui***  
 * database.php (the foundation php for querying the database)
