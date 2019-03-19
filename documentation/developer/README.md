@@ -1,4 +1,4 @@
-# Final project
+# Fish Tank
 
 # basic function (detailed function part)
 ***UI functionality***  
