@@ -1,4 +1,4 @@
-# Final project
+# Fish Tank project
 ***author***  
 * Jie Miao
 * Shanglin Cai
