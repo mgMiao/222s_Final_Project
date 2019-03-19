@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>Fish Tank App</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <!--reference:https://www.w3schools.com/css/css_rwd_viewport.asp-->
+  </head>
+  <body>
+    <h6 class="text-center card-header font-weight-bold " id = "welcome"></h6>
+      <div id="controlscreen">
+        <div class="card ">
+            <div class="card-header text-uppercase text-center font-weight-bold">Control Screen</div>
+          </div>
+            <div class="card">
+            <div class="card-header text-uppercase text-center bg-primary text-light">Fish Tank Temperature</div>
+            <div class="container">
+              <div class="row">
+                <div class="col-6">
+              <h6 class="card-title my-1 font-weight-bold">Current Temperature:</h6>
+            </div>
+            <div class="col-6">
+              <h6 class="card-text my-1 text-info" id="temperature"></h6>
+            </div>
+            </div>
+            </div>
+            <div class="row">
+              <iframe class=" mx-auto col-lg-12 col-md-12 col-sm-12"  width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/642321/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+            </div>
+              <h6 class="card-text lg my-3 mx-auto" id="On/OffLabel"> Alert! </h6></span>
+            </div>
+            <input  id="stop" type="button" type="button" class="btn btn-success btn-block btn-secondary" onclick="warning_Switch()" value="I Know!"/>
+             <br>
+            <div class="card" >
+            <div class="card-header text-uppercase text-center bg-primary text-light">Fish Food Recorder</div>
+              <div class="card-body my-1 mx-5">
+                <h6 class="card-title">Last Time Feeding:</h6>
+                <span class="card-text" id="time_label"></span><br>
+              </div>
+            </div>
+              <div class="container">
+                 <div class = "row">
+                   <div class="col">
+                      <button type="button" class="btn btn-success btn-block" id="time_rec">Feed Today</button>
+                    </div>
+                    <div class="col">
+                     <button type="button" class="btn btn-success btn-block" id="time_show_last"> Show Last Time Fed !</button>
+                  </div>
+                </div>
+               </div>
+            </div>
+          <button  type="button" class="btn btn-danger btn-block text-uppercase" id="logout_btn" >Log Out</button>
+
+<!-- login  https://startbootstrap.com/snippets/login/ -->
+          <div class="container" id="Signin_Logout">
+              <div class="row-1">
+                <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                  <div class="card card-signin my-5">
+                    <div class="card-body">
+                      <h5 class="card-title text-center">Log In</h5>
+                      <hr class="my-4">
+                      <form class="form-signin">
+
+                        <div class="form-label-group">
+                          <input type="text" id="username" class="form-control" placeholder="username" >
+                        </div>
+                        <br>
+                        <div class="form-label-group">
+                          <input type="password" id="password" class="form-control" placeholder="Password">
+                        </div>
+                        <br>
+                        <button class="btn btn-lg btn-primary btn-block text-uppercase" type="button" id="login_btn">Log in</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+<!-- signup https://startbootstrap.com/snippets/login/ -->
+              <div class="row-2">
+                <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                  <div class="card card-signin my-5">
+                    <div class="card-body">
+                      <h5 class="card-title text-center">Register</h5>
+                      <hr class="my-4">
+                      <form class="form-signin">
+                        <div class="form-label-group">
+                          <input type="text" id="username_su" class="form-control" placeholder="Username" >
+                        </div>
+                        <br>
+                        <div class="form-label-group">
+                          <input type="password" id="password_su" class="form-control" placeholder="Password">
+                        </div>
+                        <br>
+                        <button class="btn btn-lg btn-primary btn-block text-uppercase" type="button" id="signup_btn">Sign Up</button>
+
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+     <script src="main.js"></script>
+     <script src="fish.js"></script>
+     <script src="./resources/particle/particle.min.js"></script>
+
+  </body>
+</html>
